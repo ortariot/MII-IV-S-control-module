@@ -84,7 +84,7 @@ SD `n`       | disable motor           | SD 1      |  --------------------------
 SM `n` `val` | move to target `val`    | SM 1 4000 |  [0 : 100]
 SL `n`       | move to left side       | SL 1      |  -------------------------------
 SR `n`       | move to right side      | SR 1      |  -------------------------------
-SS `n`       | stio motor  | LG 1      | SS 1      |  -------------------------------
+SS `n`       | stop motor              | SS 1      |  -------------------------------
 SP `n` `val` | set position mode 'val' | SP 1 1    |  0 - step mode, 1 - enc mode
 SA `n` `val` | set deathband `val`     | LA 1 50   |  [0 : 1000] encoder tic
 SI `n`       | get ends status         | LI 1      |  -------------------------------
