@@ -71,7 +71,7 @@ hint: CMD `LG?n`  returned val limits of intensity
 CMD | description        | exemple | val limit
 --- | -------------------| ------- | ----------------------
 EG  | get position       | EG      |  [-9999999 : 9999999]
-LR  | reset position     | LR      |  -------
+ER  | reset position     | ER      |  -------
 
 hint: CMD `EG?n`  returned val limits of position
 
