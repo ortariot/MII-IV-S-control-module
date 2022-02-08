@@ -93,6 +93,15 @@ hint: Before starting work with the motor, it must be turned on using the `SE` c
 
 `Atention:` Don't forget to turn off the motor control when not using it with the `SD` command.
 
+## Get ends status 
+
+resp         | description        
+------------ | -------------------
+NN           | limits are not closed
+RN           | right limit are closed
+NL           | left limit are closed
+RL           | both limits are closed
+
 ## System info
 
 CMD | description    | exemple
