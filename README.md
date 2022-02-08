@@ -97,10 +97,10 @@ hint: Before starting work with the motor, it must be turned on using the `SE` c
 
 resp         | description        
 ------------ | -------------------
-NN           | limits are not closed
-RN           | right limit are closed
-NL           | left limit are closed
-RL           | both limits are closed
+NN           | ends are not closed
+RN           | right end are closed
+NL           | left end are closed
+RL           | both ends are closed
 
 ## System info
 
