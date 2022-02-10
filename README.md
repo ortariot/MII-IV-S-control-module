@@ -28,6 +28,11 @@ pin | description
 2   | -
 
 
+## Encoder connector
+
+![MII-IV Plate](/PIC/Enc.png)
+
+
 ## LED Schematic
 
 ![MII-IV Plate](/PIC/LED_Sch.png)
