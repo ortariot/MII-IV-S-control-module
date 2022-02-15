@@ -94,6 +94,7 @@ SS `n`       | stop motor              | SS 1      |  --------------------------
 SP `n` `val` | set position mode `val` | SP 1 1    |  0 - step mode, 1 - enc mode
 SA `n` `val` | set deathband `val`     | LA 1 50   |  [0 : 1000] encoder tic
 SI `n`       | get ends status         | LI 1      |  -------------------------------
+SC `n`       | get action status       | SC 1      |  -1 - to left, 1 - to right
 
 
 
@@ -118,4 +119,5 @@ CMD | description    | exemple
 QX  | get board ID   | QX
 QN  | get board name | QN
 QV  | get version    | QV
+QM  | get motors     | QV
 
