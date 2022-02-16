@@ -95,6 +95,7 @@ SP `n` `val` | set position mode `val` | SP 1 1    |  0 - step mode, 1 - enc mod
 SA `n` `val` | set deathband `val`     | LA 1 50   |  [0 : 1000] encoder tic
 SI `n`       | get ends status         | LI 1      |  -------------------------------
 SC `n`       | get action status       | SC 1      |  -1 - to left, 1 - to right
+SГ `n`       | get action (simple)     | SC 1      |  L - to left, R - to right, S - stop
 
 
 
