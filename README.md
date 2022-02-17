@@ -82,20 +82,21 @@ hint: CMD `EG?n`  returned val limits of position
 
 ## Motor Control
 
-CMD          | description             | exemple   | val limit
------------- | ------------------------| -------   | --------------------------------
-SE `n`       | enable motor            | SE 1      |  -------------------------------
-SD `n`       | disable motor           | SD 1      |  -------------------------------
-SM `n` `val` | move to target `val`    | SM 1 4000 |  [0 : 9999999]
-SL `n`       | move to left side       | SL 1      |  -------------------------------
-SR `n`       | move to right side      | SR 1      |  -------------------------------
-SV `n` `val` | set motor velocity      | SV 1 65   |  [0 : 100]
-SS `n`       | stop motor              | SS 1      |  -------------------------------
-SP `n` `val` | set position mode `val` | SP 1 1    |  0 - step mode, 1 - enc mode
-SA `n` `val` | set deathband `val`     | LA 1 50   |  [0 : 1000] encoder tic
-SI `n`       | get ends status         | LI 1      |  -------------------------------
-SC `n`       | get action status       | SC 1      |  -1 - to left, 1 - to right
-SГ `n`       | get action (simple)     | SC 1      |  L - to left, R - to right, S - stop
+CMD          | description                 | exemple   | val limit
+------------ | ----------------------------| -------   | --------------------------------
+SE `n`       | enable motor                | SE 1      |  -------------------------------
+SD `n`       | disable motor               | SD 1      |  -------------------------------
+SM `n` `val` | move to target `val`        | SM 1 4000 |  [0 : 9999999]
+SL `n`       | move to left side           | SL 1      |  -------------------------------
+SR `n`       | move to right side          | SR 1      |  -------------------------------
+SV `n` `val` | set motor velocity          | SV 1 65   |  [0 : 100]
+SZ `n` `val` | set fast/slow velocity mode | SZ 1 1    |  0 - slow mode, 1 - fast mode
+SS `n`       | stop motor                  | SS 1      |  -------------------------------
+SP `n` `val` | set position mode `val`     | SP 1 1    |  0 - step mode, 1 - enc mode
+SA `n` `val` | set deathband `val`         | LA 1 50   |  [0 : 1000] encoder tic
+SI `n`       | get ends status             | LI 1      |  -------------------------------
+SC `n`       | get action status           | SC 1      |  -1 - to left, 1 - to right
+SГ `n`       | get action (simple)         | SC 1      |  L - to left, R - to right, S - stop
 
 
 
