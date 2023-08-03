@@ -4,7 +4,6 @@
 
 ![MII-IV Plate](/PIC/plate.png)
 
-
 ## Step motor connector (J4)
 
 pin | description
@@ -18,35 +17,44 @@ pin | description
 7   | GND
 8   | L_END
 
-
 ## LED connector (J3A - J3D)
-
 
 pin | description
 --- | -------------
 1   | +
 2   | -
 
-
 ## Encoder connector
 
 ![MII-IV Plate](/PIC/Enc.png)
-
 
 ## LED Schematic
 
 ![MII-IV Plate](/PIC/LED_Sch.png)
 
-
-
-
 ## Motor power connector
-
 
 pin | description
 --- | -------------
 1   | 12 VDC
 2   | GND
+
+![MII-IV Plate](/PIC/cam_pulse.png)
+
+pin | description
+--- | -------------
+1   | GND
+2   | +5V
+3   | pulse signsl for cam
+4   | GPIO2
+5   | GPIO3
+6   | GPIO4
+7   | GPIO5
+8   | GPIO6
+9   | GPIO7
+10  | GPIO8
+11  | +5V
+12  | GND
 
 ## Port settings
 
@@ -60,7 +68,6 @@ handshake    | off
 ## Commands
 
 ## LED Control
-
 
 CMD          | description        | exemple | val limit
 ------------ | -------------------| ------- | ---------
@@ -93,21 +100,19 @@ SV `n` `val` | set motor velocity          | SV 1 65   |  [0 : 100]
 SZ `n` `val` | set fast/slow velocity mode | SZ 1 1    |  0 - slow mode, 1 - fast mode
 SS `n`       | stop motor                  | SS 1      |  -------------------------------
 SP `n` `val` | set position mode `val`     | SP 1 1    |  0 - step mode, 1 - enc mode
-SA `n` `val` | set deathband `val`         | LA 1 50   |  [0 : 1000] encoder tic
+SA `n` `val` | set deathband `val`         | SA 1 50   |  [0 : 1000] encoder tic
 SI `n`       | get ends status             | LI 1      |  -------------------------------
 SC `n`       | get action status           | SC 1      |  -1 - to left, 1 - to right
-SГ `n`       | get action (simple)         | SC 1      |  L - to left, R - to right, S - stop
-
-
-
+SГ `n`       | get action (simple)         | SR 1      |  L - to left, R - to right, S - stop
+SY `n`       |set camera pulse delta       | SY 1 100  |  [5 : 10000]
 
 hint: Before starting work with the motor, it must be turned on using the `SE` command.
 
 `Atention:` Don't forget to turn off the motor control when not using it with the `SD` command.
 
-## Get ends status 
+## Get ends status
 
-resp         | description        
+resp         | description
 ------------ | -------------------
 NN           | ends are not closed
 RN           | right end are closed
@@ -122,4 +127,3 @@ QX  | get board ID   | QX
 QN  | get board name | QN
 QV  | get version    | QV
 QM  | get motors     | QV
-
