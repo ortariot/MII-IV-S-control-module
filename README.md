@@ -76,14 +76,23 @@ LD `n`       | disable led        | LD 1    |  -------
 LS `n` `val` | set led intensity  | LS 1 85 |  [0 : 100]
 LG `n`       | get led intensity  | LG 1    |  -------
 
+<span style="color:red"> firmware version: 4b07o082023 </span>
+
 hint: CMD `LG?n`  returned val limits of intensity
 
 ## Encoder Control
 
-CMD | description        | exemple | val limit
---- | -------------------| ------- | ----------------------
-EG  | get position       | EG      |  [-9999999 : 9999999]
-ER  | reset position     | ER      |  -------
+CMD | description                              | exemple       | val limit
+--- | -----------------------------------------| ------------- | ----------------------
+EG  | get position                             | EG            |  [-9999999 : 9999999]
+ER  | reset position                           | ER            |  -------
+ET  | set period scan pulse                    | ET 1 200      |  [-9999999 : 9999999]
+EN  | set start scan position                  | EN 1 100      |  [-9999999 : 9999999]
+EB  | start scan with feedback for n points    | EB 1 1000     |  [-9999999 : 9999999]
+ES  | start scan without feedback for n points | EX 1 1000     |  [-9999999 : 9999999]
+EF  | response flag                            | EF            |  -------
+
+<span style="color:red"> firmware version: 4b07o082023 </span>
 
 hint: CMD `EG?n`  returned val limits of position
 
@@ -106,6 +115,8 @@ SC `n`       | get action status           | SC 1      |  -1 - to left, 1 - to r
 SГ `n`       | get action (simple)         | SR 1      |  L - to left, R - to right, S - stop
 SY `n`       |set camera pulse delta       | SY 1 100  |  [5 : 10000]
 
+<span style="color:red"> firmware version: 4b07o082023 </span>
+
 hint: Before starting work with the motor, it must be turned on using the `SE` command.
 
 `Atention:` Don't forget to turn off the motor control when not using it with the `SD` command.
@@ -119,6 +130,8 @@ RN           | right end are closed
 NL           | left end are closed
 RL           | both ends are closed
 
+<span style="color:red"> firmware version: 4b07o082023 </span>
+
 ## System info
 
 CMD | description    | exemple
@@ -127,3 +140,22 @@ QX  | get board ID   | QX
 QN  | get board name | QN
 QV  | get version    | QV
 QM  | get motors     | QV
+
+<span style="color:red"> firmware version: 4b07o082023 </span>
+
+## Exemples
+
+### Start the scanning process with feedback
+
+1. set period for pulse generator `ET 1 200`
+2. set start position  `EN 1 100`
+3. enable motor `SE 1`
+4. start scanning process `EB 1 1000` (for 1000 scan points)
+5. send response when receiving a frame `EF`  
+
+### Start the scanning process without feedback
+
+1. set period for pulse generator `ET 1 200`
+2. set start position  `EN 1 100`
+3. enable motor `SE 1`
+4. start scanning process `ES 1 1000` (for 1000 scan points)
