@@ -82,15 +82,17 @@ hint: CMD `LG?n`  returned val limits of intensity
 
 ## Encoder Control
 
-CMD | description                              | exemple       | val limit
---- | -----------------------------------------| ------------- | ----------------------
-EG  | get position                             | EG            |  [-9999999 : 9999999]
-ER  | reset position                           | ER            |  -------
-ET  | set period scan pulse                    | ET 1 200      |  [-9999999 : 9999999]
-EN  | set start scan position                  | EN 1 100      |  [-9999999 : 9999999]
-EB  | start scan with feedback for n points    | EB 1 1000     |  [-9999999 : 9999999]
-ES  | start scan without feedback for n points | EX 1 1000     |  [-9999999 : 9999999]
-EF  | response flag                            | EF            |  -------
+CMD | description                                    | exemple       | val limit
+--- | -----------------------------------------------| ------------- | ----------------------
+EG  | get position                                   | EG            |  [-9999999 : 9999999]
+ER  | reset position                                 | ER            |  -------
+ET  | set period scan pulse                          | ET 1 200      |  [-9999999 : 9999999]
+EN  | set start scan position                        | EN 1 100      |  [-9999999 : 9999999]
+EB  | start scan with feedback for n points          | EB 1 1000     |  [-9999999 : 9999999]
+ES  | start scan without feedback for n points       | EX 1 1000     |  [-9999999 : 9999999]
+EF  | send response flag                             | EF            |  -------
+ED  | get scan count pulse and target-curent delta   | ED            |  pulse_count delta
+EW  | get scan count puls                            | EW            |  pulse_count
 
 <span style="color:red"> firmware version: 4b07o082023 </span>
 
@@ -154,6 +156,9 @@ QM  | get motors     | QV
 5. send response when receiving a frame `EF`  
 
 ### Start the scanning process without feedback
+
+for testing without encoder required to be enabled debug mode with the command `DE`
+For disabled debug mode use command `DD`
 
 1. set period for pulse generator `ET 1 200`
 2. set start position  `EN 1 100`
