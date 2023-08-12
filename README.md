@@ -93,7 +93,7 @@ ES  | start scan without feedback for n points       | EX 1 1000     |  [-999999
 EF  | send response flag                             | EF            |  -------
 ED  | get scan count pulse and target-curent delta   | ED            |  pulse_count delta
 EW  | get scan count puls                            | EW            |  pulse_count
-EL  | set puls length                                | EW            |  [0 : 9999999]; default 5000
+EL  | set puls length                                | EL            |  [0 : 9999999]; default 5000
 
 <span style="color:red"> firmware version: 4b07o082023 </span>
 
