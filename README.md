@@ -89,11 +89,13 @@ ER  | reset position                                 | ER            |  -------
 ET  | set period scan pulse                          | ET 1 200      |  [-9999999 : 9999999]
 EN  | set start scan position                        | EN 1 100      |  [-9999999 : 9999999]
 EB  | start scan with feedback for n points          | EB 1 1000     |  [-9999999 : 9999999]
-ES  | start scan without feedback for n points       | EX 1 1000     |  [-9999999 : 9999999]
+ES  | start scan without feedback for n points       | ES 1 1000     |  [-9999999 : 9999999]
+EX  | stop scan                                      | EX            |  [-9999999 : 9999999]
 EF  | send response flag                             | EF            |  -------
 ED  | get scan count pulse and target-curent delta   | ED            |  pulse_count delta
 EW  | get scan count puls                            | EW            |  pulse_count
 EL  | set puls length                                | EL 1 2000     |  [0 : 9999999]; default 5000
+EO  | one camera pulse generation                     | EO            |  -------
 
 <span style="color:red"> firmware version: 4b07o082023 </span>
 
