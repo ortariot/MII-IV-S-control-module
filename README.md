@@ -95,7 +95,7 @@ EF  | send response flag                             | EF            |  -------
 ED  | get scan count pulse and target-curent delta   | ED            |  pulse_count delta
 EW  | get scan count puls                            | EW            |  pulse_count
 EL  | set puls length                                | EL 1 2000     |  [0 : 9999999]; default 5000
-EO  | one camera pulse generation                     | EO            |  -------
+EO  | one camera pulse generation                    | EO            |  -------
 
 <span style="color:red"> firmware version: 4b07o082023 </span>
 
@@ -145,6 +145,17 @@ QX  | get board ID   | QX
 QN  | get board name | QN
 QV  | get version    | QV
 QM  | get motors     | QV
+
+## Debug commands
+
+CMD | description                                    | exemple       | val limit
+--- | -----------------------------------------------| ------------- | ----------------------
+DL  | set puls length                                | DL 1 2000     |  [0 : 9999999]; default 0
+DT  | set total puls                                 | DT 1 300      |  [0 : 9999999]; default 0
+DP  | delay between pulses                           | DP 1 100      |  [0 : 9999999]; default 0
+DO  | one camera pulse generation                    | DO            |  -------
+DS  | series camera pulse generation                 | DO 1 300      |  [0 : 9999999]; default 0
+DG  | get scan count puls                            | DG            |  pulse_count
 
 <span style="color:red"> firmware version: 4b07o082023 </span>
 
